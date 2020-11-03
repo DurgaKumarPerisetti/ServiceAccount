@@ -51,7 +51,7 @@ namespace ServiceAccount
             httpclient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "api/data/v9.0/accounts/");
-            request.Content = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
+            request.Content = new StringContent(JsonConvert.SerializeObject(leaddata), Encoding.UTF8, "application/json");
            
             HttpResponseMessage response = await httpclient.SendAsync(request);
 
