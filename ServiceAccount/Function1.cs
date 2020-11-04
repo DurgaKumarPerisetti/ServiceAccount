@@ -29,11 +29,11 @@ namespace ServiceAccount
                 { "name", req.Query["AccountName"].ToString()},
                 { "description", req.Query["Phone"].ToString()}
              };
-            string serviceUrl = "https://maharaj009.api.crm8.dynamics.com";
-            string clientId = "3b714e33-9c30-4c29-8a85-e2785f2adeb8";
-            string secret = "7C~gBX9y~b.Kd9rBLBCCV~pwQ5BEtgl1Ar";
+            string serviceUrl = "https://perisett.crm8.dynamics.com/";
+            string clientId = "70c01f55-b442-4e54-a9ec-45d4a31eb902";
+            string secret = "y~F26M0JHpvu_r~b1AhXRmwJE33.Sla0A0";
 
-            AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/3b08c2a3-9393-4248-9c25-daec0269ceda");
+            AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/decf26c1-386d-4581-857a-b0fdc57bfa07");
             ClientCredential credential = new ClientCredential(clientId, secret);
 
             AuthenticationResult result1 = await authContext.AcquireTokenAsync(serviceUrl, credential);
