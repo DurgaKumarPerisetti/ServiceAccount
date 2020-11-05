@@ -27,7 +27,7 @@ namespace ServiceAccount
             var leaddata = new JObject
             {
                 { "name", req.Query["AccountName"].ToString()},
-                { "description", req.Query["Phone"].ToString()}
+                { "telephone1", req.Query["Phone"].ToString()}
              };
             string serviceUrl = "https://perisett.crm8.dynamics.com/";
             string clientId = "70c01f55-b442-4e54-a9ec-45d4a31eb902";
